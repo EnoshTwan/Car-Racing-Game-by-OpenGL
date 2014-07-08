@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		72D90063183EDE0300B5219D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72D90062183EDE0300B5219D /* main.cpp */; };
+		728824021856343700E7F105 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 728824011856343700E7F105 /* main.cpp */; };
+		72CA80C9185619BF006DDE8D /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72CA80C8185619BF006DDE8D /* ImageIO.framework */; };
 		72D90065183EDE0300B5219D /* ___________.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72D90064183EDE0300B5219D /* ___________.1 */; };
+		72D9006C183EDE0300B5219D /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72D9006B183EDE0300B5219D /* GLUT.framework */; };
+		72D9006E183EDE0300B5219D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72D9006D183EDE0300B5219D /* OpenGL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,9 +28,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		728824011856343700E7F105 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		7288240B1856385900E7F105 /* sky.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = sky.bmp; sourceTree = "<group>"; };
+		7288240C1856385900E7F105 /* wall.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = wall.bmp; sourceTree = "<group>"; };
+		72CA80C8185619BF006DDE8D /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		72D9005F183EDE0300B5219D /* 计算机图形学——实验三 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "计算机图形学——实验三"; sourceTree = BUILT_PRODUCTS_DIR; };
-		72D90062183EDE0300B5219D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		72D90064183EDE0300B5219D /* ___________.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = "___________.1"; sourceTree = "<group>"; };
+		72D9006B183EDE0300B5219D /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		72D9006D183EDE0300B5219D /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +43,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72CA80C9185619BF006DDE8D /* ImageIO.framework in Frameworks */,
+				72D9006E183EDE0300B5219D /* OpenGL.framework in Frameworks */,
+				72D9006C183EDE0300B5219D /* GLUT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +55,9 @@
 		72D90056183EDE0300B5219D = {
 			isa = PBXGroup;
 			children = (
+				72CA80C8185619BF006DDE8D /* ImageIO.framework */,
+				72D9006D183EDE0300B5219D /* OpenGL.framework */,
+				72D9006B183EDE0300B5219D /* GLUT.framework */,
 				72D90061183EDE0300B5219D /* 计算机图形学——实验三 */,
 				72D90060183EDE0300B5219D /* Products */,
 			);
@@ -60,7 +74,9 @@
 		72D90061183EDE0300B5219D /* 计算机图形学——实验三 */ = {
 			isa = PBXGroup;
 			children = (
-				72D90062183EDE0300B5219D /* main.cpp */,
+				7288240B1856385900E7F105 /* sky.bmp */,
+				7288240C1856385900E7F105 /* wall.bmp */,
+				728824011856343700E7F105 /* main.cpp */,
 				72D90064183EDE0300B5219D /* ___________.1 */,
 			);
 			path = "计算机图形学——实验三";
@@ -117,7 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72D90063183EDE0300B5219D /* main.cpp in Sources */,
+				728824021856343700E7F105 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,7 +173,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.8;
 			};
 			name = Debug;
 		};
@@ -188,13 +204,14 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.8;
 			};
 			name = Release;
 		};
 		72D90069183EDE0300B5219D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -202,6 +219,7 @@
 		72D9006A183EDE0300B5219D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -225,6 +243,7 @@
 				72D9006A183EDE0300B5219D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
